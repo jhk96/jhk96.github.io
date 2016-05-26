@@ -153,7 +153,7 @@ html {
 	margin-bottom: 75px;
 	padding: 0;
 	width: 350px;
-	height: 350px;
+	height: 600px;
 	float: left;
 	position: relative;
 	background-image: url("../images/mindthegap.png");
@@ -170,11 +170,12 @@ html {
 	margin-top: 75px;
 	margin-bottom: 75px;
 	padding: 0;
-	background-color: blue;
 	width: 350px;
-	height: 350px;
+	height: 600px;
 	float: right;
 	position: relative;
+	background-image: url("../images/website.png");
+	background-size: cover;
 }
 
 .websiteitem:hover .textborder {
@@ -184,12 +185,12 @@ html {
 
 .hovershade:hover {
 	background-color: rgba(0, 0, 0, .8);
-	height: 350px;
+	height: 600px;
 	width: 350px;
 }
 
 .textborder {
-	height: 300px;
+	height: 550px;
 	width: 300px;
 	margin: 0 auto;
 	padding: 0;
@@ -214,6 +215,7 @@ html {
 
 .portfoliopage h4{
 	margin: 0 auto;
+	margin-top: 100px;
 	padding: 0;
 	color: white;
 	font-family: "AmaticSC";
@@ -237,7 +239,7 @@ html {
 
 .portfolioitemwrapper {
 	margin: 0 auto;
-	height: 500px;
+	height: 750px;
 }
 
 .portfoliopage {
@@ -349,7 +351,9 @@ html {
 	letter-spacing: 3px;
 	font-weight: 300;
 	margin: 0;
-	padding-top: 75px;
+	margin-top: 75px;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.5);
 }
 
 .contactpage {
