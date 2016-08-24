@@ -106,6 +106,7 @@ html {
 	height: 100%;
 	background-color: #02c9c9;
 	background-image: url("../images/BG.png");
+	background-repeat: none;
 	background-position: center;
 }
 
@@ -408,7 +409,8 @@ html {
 	min-height: 85%;
 	margin: 0 auto;
 	background-image: url("../images/CONTACTIMAGE.jpg");
-	background-size: cover;
+	background-position: center;
+
 }
 
 /* FOOTER */
