@@ -25,7 +25,8 @@ html {
 	margin: auto;
 	position: fixed;
 	left: 0px;
-	top: 25px;
+	top: 0px;
+	background-color: #02c9c9;
 }
 
 .navcontainer {
@@ -53,10 +54,10 @@ html {
 	color: white;
 }
 #nav a:hover {
-	color: #23DAFF;
+	color: rgba(0,0,0,0.75);
 }
 #nav a:active {
-	color: #23DAFF;
+	color: rgba(0,0,0,0.75);
 }
 
 .container {
@@ -66,7 +67,7 @@ html {
 }
 
 /* BACKGROUND WRAPPER */
-
+/*
 .bgwrapper {
 	height: auto;
 	background-image: url("../images/WEBSITE2.jpg");
@@ -76,6 +77,8 @@ html {
 	margin: 0 auto;
 	padding: 0;
 }
+
+/* CAROUSEL */
 
 
 /* HELLO PAGE */
@@ -101,10 +104,15 @@ html {
 
 .hellopage {
 	height: 100%;
+	background-color: #02c9c9;
+	background-image: url("../images/BG.png");
+	background-position: center;
 }
 
 
 /* ABOUT PAGE */
+
+
 
 .aboutpage h3 {
 	color: white;
@@ -115,35 +123,71 @@ html {
 	letter-spacing: 3px;
 	margin: 0;
 	padding-top: 20%;
+	padding-bottom: 0px;
 }
 
 .aboutpage p {
-	color: white;
+	color: rgba(0,0,0,0.75);
 	font-family: "Helvetica";
-	font-size: 20px;
+	font-size: 16px;
 	text-align: center;
 	text-transform: none;
 	margin: 0;
-	padding-top: 5%;
-	padding-bottom: 10%;
+	padding-bottom: 10px;
 	line-height: 150%;
 	height: auto;
 	font-weight: 100;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
 }
 
 .aboutpage p b {
+	color: white;
 	letter-spacing: 1.5px;
 	font-family: "AmaticSC-BOLD";
 	font-size: 25px;
 	letter-spacing: 3px;
+	margin-top: 100px;
 }
 
 .aboutpage {
 	min-height: 100%;
-	background-color: rgba(0, 0, 0, 0.75);
+	background-color: #1d9aa0;
 	margin: 0, auto;
+	height: 900px;
 }
 
+.third {
+	width: 250px;
+	min-height: 250px;
+	float: left;
+}
+
+.text {
+	height: 410px;
+}
+.text:hover {
+	background-color: #62adaf;
+}
+
+.pen {
+	width: 250px;
+	height: 250px;
+	background-image: url("../images/pen.png");
+}
+
+.drums {
+	width: 250px;
+	height: 250px;
+	background-image: url("../images/drums.png");
+}
+
+.binoculars {
+	width: 250px;
+	height: 250px;
+	background-image: url("../images/binoculars.png");
+}
 
 /*PORTFOLIO PAGE*/
 
@@ -203,7 +247,7 @@ html {
 }
 
 .portfoliopage h3{
-	color: #424242;
+	color: white;
 	font-family: "AmaticSC";;
 	font-size: 50px;
 	text-transform: uppercase;
@@ -243,8 +287,7 @@ html {
 }
 
 .portfoliopage {
-	/*background-color: #d6d6d6;*/
-	background-color: #797979;
+	background-color: #83c9cc;
 	margin: 0 auto;
 	padding: 0;
 	min-height: auto;
@@ -254,7 +297,7 @@ html {
 /* TECHNICAL PAGE */
 
 .technicalpage h3{
-	color: #424242;
+	color: white;
 	font-family: "AmaticSC";;
 	font-size: 45px;
 	text-transform: uppercase;
@@ -325,7 +368,7 @@ html {
 }
 
 .technicalpage {
-	background-color: #d6d1b7;
+	background-color: #1d9aa0;
 	min-height: auto;
 }
 
@@ -346,20 +389,25 @@ html {
 .contactpage p {
 	color: white;
 	font-family: "Myanmar Sangam MN";
-	font-size: 20px;
+	font-size: 16px;
 	text-align: center;
 	letter-spacing: 3px;
 	font-weight: 300;
 	margin: 0;
 	margin-top: 75px;
-	padding: 10px;
-	background-color: rgba(0,0,0,0.5);
+	padding: 20px;
 }
 
+.column {
+	width: 300px;
+	float: left;
+	background-color: #02c9c9;
+
+}
 .contactpage {
 	min-height: 85%;
 	margin: 0 auto;
-	background-image: url("../images/TEST.jpg");
+	background-image: url("../images/CONTACTIMAGE.jpg");
 	background-size: cover;
 }
 
@@ -373,11 +421,11 @@ html {
 	letter-spacing: 3px;
 	font-weight: 300;
 	margin: 0;
-	padding-top: 5%;
+	padding-top: 15px;
 }
 
 .footer {
-	min-height: 15%;
+	min-height: 10%;
 	background-color: #424242;
 	margin: 0 auto;
 }
