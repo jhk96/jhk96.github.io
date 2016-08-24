@@ -18,6 +18,11 @@ html {
 	src: url("../fonts/amatic/Amatic-Bold.ttf");
 }
 
+@font-face {
+	font-family: Myanmar Sangam MN;
+	src: url("../fonts/myanmar/Myanmar_Sangam_MN.ttf")
+}
+
 /* NAVBAR */
 #nav {
 	width: 100%;
