@@ -406,7 +406,7 @@ html {
 
 }
 .contactpage {
-	min-height: 85%;
+	height: 85%;
 	margin: 0 auto;
 	background-image: url("../images/CONTACTIMAGE.jpg");
 	background-position: center;
@@ -427,7 +427,7 @@ html {
 }
 
 .footer {
-	min-height: 10%;
+	height: 10%;
 	background-color: #424242;
 	margin: 0 auto;
 }
