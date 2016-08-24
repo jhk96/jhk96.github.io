@@ -111,7 +111,7 @@ html {
 	height: 100%;
 	background-color: #02c9c9;
 	background-image: url("../images/BG.png");
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center;
 }
 
@@ -414,6 +414,7 @@ html {
 	height: 85%;
 	margin: 0 auto;
 	background-image: url("../images/CONTACTIMAGE.jpg");
+	background-repeat: no-repeat;
 	background-position: center;
 
 }
