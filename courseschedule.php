@@ -1,6 +1,6 @@
 <html>
-	<header>
-	</header>
+	<head>
+	</head>
 	<body>
 		<?php echo '<p>Hello World</p>'; ?> 
 	</body>
