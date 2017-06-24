@@ -1,7 +1,952 @@
 <html>
-	<header>
-	</header>
+	<head>
+		<style>
+			body {
+				width: 100%;
+			}
+			.course {
+				width: 200px;
+				float: left;
+				height: 600px;
+				overflow-y: scroll;
+			}
+			table, th, td {
+				border: 1px solid grey;
+			}
+			table {
+				width: 600px;
+				float: left;
+			}
+			td {
+				width: 500px;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
 	<body>
-		<p>Hello World</p>
+		<div>
+			<div style="overflow-x: scroll;width: 3000px;padding-bottom: 30px;">
+				<div class="course">
+					COMM 203<br>
+					<input type="radio" name="COMM203" value=""></input><br>
+					<input type="radio" name="COMM203" value="1 W F 1130 1200 1230"><br>Atwal, Perdip</input><br>
+					<input type="radio" name="COMM203" value="1 T H 930 1000 1030"><br>Knight, Thomas</input><br>
+					<input type="radio" name="COMM203" value="1 T H 1100 1130 1200"><br>Knight, Thomas</input><br>
+					<input type="radio" name="COMM203" value="1 T H 1400 1430 1500"><br>Atwal, Perdip</input><br>
+					<input type="radio" name="COMM203" value="2 M W 1430 1500 1530"><br>Knight, Thomas</input><br>
+					<input type="radio" name="COMM203" value="2 M W 1600 1630 1700"><br>Knight, Thomas</input><br>
+					<input type="radio" name="COMM203" value="2 M W 1130 1200 1230"><br>Rawcliffe, Wayne</input><br>
+					<input type="radio" name="COMM203" value="2 W F 830 900 930"><br>Daniels, Michael</input><br>
+					<input type="radio" name="COMM203" value="2 W F 1130 1200 1230"><br>Daniels, Michael</input><br>
+					<input type="radio" name="COMM203" value="2 W F 1300 1330 1400"><br>Daniels, Michael</input><br>
+				</div>
+				<div class="course">
+					COMM 296<br>
+					<input type="radio" name="COMM296" value=""></input><br>
+					<input type="radio" name="COMM296" value="1 M W 830 900 930"><br>Park, So Eun</input><br>
+					<input type="radio" name="COMM296" value="1 M W 1000 1030 1100"><br>Park, So Eun</input><br>
+					<input type="radio" name="COMM296" value="1 M W 1130 1200 1230"><br></input><br>
+					<input type="radio" name="COMM296" value="1 M W 1300 1330 1400"><br>Swaffield, Mary</input><br>
+					<input type="radio" name="COMM296" value="1 M W 1430 1500 1530"><br>Swaffield, Mary</input><br>
+					<input type="radio" name="COMM296" value="1 M W 1600 1630 1700"><br></input><br>
+					<input type="radio" name="COMM296" value="1 T H 1100 1130 1200"><br>Milne, Tamar</input><br>
+					<input type="radio" name="COMM296" value="2 M W 1130 1200 1230"><br>Milne, Tamar</input><br>
+					<input type="radio" name="COMM296" value="2 M W 1430 1500 1530"><br>Milne, Tamar</input><br>
+					<input type="radio" name="COMM296" value="2 M W 1600 1630 1700"><br></input><br>
+					<input type="radio" name="COMM296" value="2 W F 830 900 930"><br></input><br>
+					<input type="radio" name="COMM296" value="2 W F 1000 1030 1100"><br></input><br>
+					<input type="radio" name="COMM296" value="2 W F 1130 1200 1230"><br>Dickson, Jenny</input><br>
+					<input type="radio" name="COMM296" value="2 W F 1300 1330 1430"><br>Dickson, Jenny</input><br>
+				</div>
+				<div class="course">
+					COMM 390<br>
+					<input type="radio" name="COMM390" value=""></input><br>
+					<input type="radio" name="COMM390" value="1 M W 830 900 930"><br>Bowker, Elizabeth</input><br>
+					<input type="radio" name="COMM390" value="1 M W 1000 1030 1100"><br>Bowker, Elizabeth</input><br>
+					<input type="radio" name="COMM390" value="1 M W 1130 1200 1230"><br>Oman, Jessica</input><br>
+					<input type="radio" name="COMM390" value="1 M W 1300 1330 1400"><br>Oman, Jessica</input><br>
+					<input type="radio" name="COMM390" value="1 M W 1430 1500 1530"><br>Morrell, Cameron</input><br>
+					<input type="radio" name="COMM390" value="1 M W 1600 1630 1700"><br>Morrell, Cameron</input><br>
+					<input type="radio" name="COMM390" value="1 T H 930 1000 1030"><br>Brealey, Chad</input><br>
+					<input type="radio" name="COMM390" value="1 T H 1100 1130 1200"><br>Brealey, Chad</input><br>
+					<input type="radio" name="COMM390" value="1 T H 1400 1430 1500"><br></input><br>
+					<input type="radio" name="COMM390" value="1 T H 1530 1600 1630"><br></input><br>
+					<input type="radio" name="COMM390" value="1 M F 830 900 930"><br></input><br>
+					<input type="radio" name="COMM390" value="1 M F 1000 1030 1100"><br></input><br>
+					<input type="radio" name="COMM390" value="1 M F 1130 1200 1230"><br>Brealey, Chad</input><br>
+					<input type="radio" name="COMM390" value="1 M F 1300 1330 1400"><br>Brealey, Chad</input><br>
+					<input type="radio" name="COMM390" value="1 M W 1430 1500 1530"><br>Silver Sweeney, Marlisse</input><br>
+					<input type="radio" name="COMM390" value="1 M W 1600 1630 1700"><br>Silver Sweeney, Marlisse</input><br>
+					<input type="radio" name="COMM390" value="1 T H 930 1000 1030"><br></input><br>
+					<input type="radio" name="COMM390" value="1 T H 1100 1130 1200"><br></input><br>
+					<input type="radio" name="COMM390" value="2 M W 830 900 930"><br>Sutherland, Brian</input><br>
+					<input type="radio" name="COMM390" value="2 M W 1000 1030 1100"><br>Sutherland, Brian</input><br>
+					<input type="radio" name="COMM390" value="2 M W 1130 1200 1230"><br>Sutherland, Brian</input><br>
+					<input type="radio" name="COMM390" value="2 M W 1300 1330 1400"><br>Oman, Jessica</input><br>
+					<input type="radio" name="COMM390" value="2 M W 1430 1500 1530"><br>Oman, Jessica</input><br>
+					<input type="radio" name="COMM390" value="2 M W 1430 1500 1530"><br></input><br>
+					<input type="radio" name="COMM390" value="2 M W 1600 1630 1700"><br></input><br>
+					<input type="radio" name="COMM390" value="2 T H 930 1000 1030"><br>BOWKER, ELIZABETH</input><br>
+					<input type="radio" name="COMM390" value="2 T H 1100 1130 1200"><br>BOWKER, ELIZABETH</input><br>
+					<input type="radio" name="COMM390" value="2 T H 1400 1430 1500"><br>MORRELL, CAMERON</input><br>
+					<input type="radio" name="COMM390" value="2 T H 1530 1600 1630"><br>MORRELL, CAMERON</input><br>
+					<input type="radio" name="COMM390" value="2 M W 1600 1630 1700"><br>MORRELL, CAMERON</input><br>
+					<input type="radio" name="COMM390" value="2 M F 1000 1030 1100"><br>SILVER SWEENEY, MARLISSE</input><br>
+					<input type="radio" name="COMM390" value="2 M F 1130 1200 1230"><br>SILVER SWEENEY, MARLISSE</input><br>
+					<input type="radio" name="COMM390" value="2 M F 1300 1330 1400"><br>BOWKER, ELIZABETH</input><br>
+					<input type="radio" name="COMM390" value="2 W F 1000 1030 1100"><br>BREALEY, CHAD</input><br>
+					<input type="radio" name="COMM390" value="2 W F 1130 1200 1230"><br>BREALEY, CHAD</input><br>
+					<input type="radio" name="COMM390" value="2 W F 1300 1330 1400"><br>BREALEY, CHAD</input><br>
+					<input type="radio" name="COMM390" value="2 T H 930 1000 1030"><br></input><br>
+					<input type="radio" name="COMM390" value="2 T H 1100 1130 1200"><br></input><br>
+					<input type="radio" name="COMM390" value="2 T H 1400 1430 1500"><br>SUTHERLAND, BRIAN</input><br>
+					<input type="radio" name="COMM390" value="2 T H 1530 1600 1630"><br>SUTHERLAND, BRIAN</input><br>
+				</div>
+				<div class="course">
+					COMM 394<br>
+					<input type="radio" name="COMM394" value=""></input><br>
+					<input type="radio" name="COMM394" value="1 M W 1300 1330 1400"><br>LINDSEY, CHARLES</input><br>
+					<input type="radio" name="COMM394" value="1 M W 1430 1500 1530"><br>LINDSEY, CHARLES</input><br>
+					<input type="radio" name="COMM394" value="1 M W 1600 1630 1700"><br>MINNS, STEVEN</input><br>
+					<input type="radio" name="COMM394" value="1 T H 930 1000 1030"><br>PINEDA SALAZAR, JOSE</input><br>
+					<input type="radio" name="COMM394" value="1 T H 1100 1130 1200"><br>PINEDA SALAZAR, JOSE</input><br>
+					<input type="radio" name="COMM394" value="1 T H 1400 1430 1500"><br>HEAD, C KEITH</input><br>
+					<input type="radio" name="COMM394" value="1 T H 1530 1600 1630"><br>HEAD, C KEITH</input><br>
+					<input type="radio" name="COMM394" value="1 M W 1300 1330 1400"><br>MINNS, STEVEN</input><br>
+					<input type="radio" name="COMM394" value="1 T H 1530 1600 1630"><br>PINEDA SALAZAR, JOSE</input><br>
+					<input type="radio" name="COMM394" value="2 M F 830 900 930"><br>MINNS, STEVEN</input><br>
+					<input type="radio" name="COMM394" value="2 M F 1000 1030 1100"><br>MINNS, STEVEN & PINEDA SALAZAR, JOSE</input><br>
+					<input type="radio" name="COMM394" value="2 W F 1300 1330 1400"><br>ROSS, THOMAS</input><br>
+					<input type="radio" name="COMM394" value="2 W F 1430 1500 1530"><br>ROSS, THOMAS</input><br>
+					<input type="radio" name="COMM394" value="2 T H 930 1000 1030"><br>MINNS, STEVEN</input><br>
+					<input type="radio" name="COMM394" value="2 T H 1100 1130 1200"><br>MINNS STEVEN</input><br>
+					<input type="radio" name="COMM394" value="2 T H 1400 1430 1500"><br>PINEDA SALAZAR, JOSE</input><br>
+					<input type="radio" name="COMM394" value="2 T H 1530 1600 1630"><br>PINEDA SALAZAR, JOSE</input><br>
+				</div>
+				<div class="course">
+					COMM 438<br>
+					<input type="radio" name="COMM438" value=""></input><br>
+					<input type="radio" name="COMM438" value="1 M W 1130 1200 1230"><br>Saunders, Adam</input><br>
+					<input type="radio" name="COMM438" value="1 M W 1300 1330 1400"><br>SAUNDERS, ADAM</input><br>
+					<input type="radio" name="COMM438" value="2 T H 1100 1130 1200"><br>Saundesr, Adam</input><br>
+					<input type="radio" name="COMM438" value="2 T H 930 1000 1030"><br>Saunders, Adam</input><br>
+				</div>
+				<div class="course">
+					COMM 204<br>
+					<input type="radio" name="COMM204" value=""></input><br>
+					<input type="radio" name="COMM204" value="1 M W 1430 1500 1530"><br>MCCORMICK, S THOMAS</input><br>
+					<input type="radio" name="COMM204" value="1 M W 1600 1630 1700"><br>MCCORMICK, S THOMAS</input><br>
+					<input type="radio" name="COMM204" value="1 T H 930 1000 1030"><br>ZHANG, HAO</input><br>
+					<input type="radio" name="COMM204" value="1 T H 1100 1130 1200"><br>GRANOT, DANIEL</input><br>
+					<input type="radio" name="COMM204" value="1 T H 1400 1430 1500"><br>GRANOT, DANIEL</input><br>
+					<input type="radio" name="COMM204" value="1 T H 1530 1600 1630"><br>GRANOT, DANIEL</input><br>
+					<input type="radio" name="COMM204" value="2 T H 1400 1430 1500"><br>ZHANG, ANMING</input><br>
+					<input type="radio" name="COMM204" value="2 T H 930 1000 1030"><br>KIM, MICHAEL JONG</input><br>
+					<input type="radio" name="COMM204" value="2 T H 1100 1130 1200"><br>KIM, MICHAEL JONG</input><br>
+					<input type="radio" name="COMM204" value="2 T H 1400 1430 1500"><br>CHEN, ANDY</input><br>
+					<input type="radio" name="COMM204" value="2 T H 1530 1600 1630"><br>ZHANG, ANMING</input><br>
+					<input type="radio" name="COMM204" value="2 M W 1000 1030 1100"><br>WERKER, GREGORY</input><br>
+				</div>
+				<div class="course">
+					COMM 393<br>
+					<input type="radio" name="COMM393" value=""></input><br>
+					<input type="radio" name="COMM393" value="1 M W 830 900 930"><br>MCINTOSH, ELLEN JANE</input><br>
+					<input type="radio" name="COMM393" value="1 M W 1000 1030 1130"><br>MCINTOSH, ELLEN JANE</input><br>
+					<input type="radio" name="COMM393" value="1 M F 1000 1030 1100"><br>SALZBERG, ELICIA</input><br>
+					<input type="radio" name="COMM393" value="1 M F 1130 1200 1230"><br>COX, BARBARA</input><br>
+					<input type="radio" name="COMM393" value="1 T H 930 1000 1030"><br>COX, BARBARA</input><br>
+					<input type="radio" name="COMM393" value="1 T H 1100 1130 1200"><br>COX, BARBARA</input><br>
+					<input type="radio" name="COMM393" value="2 M W 830 900 930"><br>MCINTOSH, ELLEN JANE</input><br>
+					<input type="radio" name="COMM393" value="2 M W 1000 1030 1100"><br>MCINTOSH, ELLEN JANE</input><br>
+					<input type="radio" name="COMM393" value="2 M W 1300 1330 1400"><br>MCINTOSH, ELLEN JANE</input><br>
+					<input type="radio" name="COMM393" value="2 M W 1430 1500 1530"><br>COX, BARBARA</input><br>
+					<input type="radio" name="COMM393" value="2 T H 930 1000 1030"><br>COX, BARBARA</input><br>
+					<input type="radio" name="COMM393" value="2 T H 1100 1130 1200"><br>COX, BARBARA</input><br>
+				</div>
+				<div class="course">
+					CPSC 304<br>
+					<input type="radio" name="CPSC304" value=""></input><br>
+					<input type="radio" name="CPSC304" value="1 T H 930 1000 1030"><br>KNORR, EDWIN MAX</input><br>
+					<input type="radio" name="CPSC304" value="1 W 1200 1230"><br></input><br>
+					<input type="radio" name="CPSC304" value="1 W 1300 1330"><br></input><br>
+					<input type="radio" name="CPSC304" value="1 T 1200 1230"><br></input><br>
+					<input type="radio" name="CPSC304" value="1 T 1400 1430"><br></input><br>
+					<input type="radio" name="CPSC304" value="1 W 1600 1630"><br></input><br>
+					<input type="radio" name="CPSC304" value="2 T H 1100 1130 1200"><br>LAKSHMANAN, LAKS</input><br>
+					<input type="radio" name="CPSC304" value="2 T H 1230 1300 1330"><br>POTTINGER, RACHEL</input><br>
+					<input type="radio" name="CPSC304" value="2 H 1400 1430"><br></input><br>
+					<input type="radio" name="CPSC304" value="2 T 1500 1530"><br></input><br>
+					<input type="radio" name="CPSC304" value="2 T 1400 1430"><br></input><br>
+					<input type="radio" name="CPSC304" value="2 F 1400 1430"><br></input><br>
+					<input type="radio" name="CPSC304" value="2 W 1500 1530"><br></input><br>
+				</div>
+				<div class="course">
+					CPSC 310<br>
+					<input type="radio" name="CPSC310" value=""></input><br>
+					<input type="radio" name="CPSC310" value="1 T H 1230 1300 1330"><br></input><br>
+					<input type="radio" name="CPSC310" value="1 T H 930 1000 1030"><br></input><br>
+					<input type="radio" name="CPSC310" value="1 F 1400 1430 1500 1530 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="1 W 1100 1130 1200 1230 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="1 W 1500 1530 1600 1630 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="1 W 1300 1330 1400 1430 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="1 H 1400 1430 1500 1530 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="1 H 1030 1100 1130 1200 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 T H 1230 1300 1330"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 T H 930 1000 1030"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 T 1330 1400 1430 1500 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 H 1030 1100 1130 1200 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 W 1000 1030 1100 1130 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 F 1500 1530 1600 1630 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 W 1600 1630 1700 1730 XXX"><br></input><br>
+					<input type="radio" name="CPSC310" value="2 H 1700 1730 1800 1830 XXX"><br></input><br>
+				</div>
+				<div class="course">
+					CPSC 394<br>
+					<input type="radio" name="CPSC320" value=""></input><br>
+					<input type="radio" name="CPSC320" value="1 M W F 1400 1430 XX XX"><br></input><br>
+					<input type="radio" name="CPSC320" value="1 M W F 1600 1630 XX XX"><br></input><br>
+					<input type="radio" name="CPSC320" value="1 M 1500 1530"><br></input><br>
+					<input type="radio" name="CPSC320" value="1 T 1430 1500"><br></input><br>
+					<input type="radio" name="CPSC320" value="1 M 900 930"><br></input><br>
+					<input type="radio" name="CPSC320" value="1 W 1200 1230"><br></input><br>
+					<input type="radio" name="CPSC320" value="2 M W F 1100 1130 XX XX"><br>WOLFMAN, STEVEN</input><br>
+					<input type="radio" name="CPSC320" value="2 M W F 800 830 XX XX"><br>BELLEVILLE, PATRICE</input><br>
+					<input type="radio" name="CPSC320" value="2 F 1200 1230"><br></input><br>
+					<input type="radio" name="CPSC320" value="2 F 1300 1330"><br></input><br>
+					<input type="radio" name="CPSC320" value="2 W 1300 1330"><br></input><br>
+					<input type="radio" name="CPSC320" value="2 F 900 930"><br></input><br>
+					<input type="radio" name="CPSC320" value="2 F 1000 1030"><br></input><br>
+					<input type="radio" name="CPSC320" value="2 F 1600 1630"><br></input><br>
+					<input type="radio" name="CPSC320" value="2 H 1100 1130"><br></input><br>
+				</div>
+				<div class="course">
+					CPSC 313<br>
+					<input type="radio" name="CPSC313" value=""></input><br>
+					<input type="radio" name="CPSC313" value="1 M W F 1100 1130 XX XX"><br>ACTON, DONALD</input><br>
+					<input type="radio" name="CPSC313" value="1 F 1200 1230"><br></input><br>
+					<input type="radio" name="CPSC313" value="1 H 1500 1530"><br></input><br>
+					<input type="radio" name="CPSC313" value="1 H 1630 1700"><br></input><br>
+					<input type="radio" name="CPSC313" value="1 F 1600 1630"><br></input><br>
+					<input type="radio" name="CPSC313" value="2 M W F 1300 1330 XX XX"><br>WARFIELD, ANDREW</input><br>
+					<input type="radio" name="CPSC313" value="2 H 1000 1030"><br></input><br>
+					<input type="radio" name="CPSC313" value="2 W 1700 1730"><br></input><br>
+					<input type="radio" name="CPSC313" value="2 W 1400 1430"><br></input><br>
+					<input type="radio" name="CPSC313" value="2 H 1630 1700"><br></input><br>
+				</div>
+				<div class="course">
+					CPSC 317<br>
+					<input type="radio" name="CPSC317" value=""></input><br>
+					<input type="radio" name="CPSC317" value="1 M W F 1100 1130 XX XX"><br>SCHROEDER, JONATAN</input><br>
+					<input type="radio" name="CPSC317" value="1 F 1300 1330"></input><br>
+					<input type="radio" name="CPSC317" value="1 H 1600 1630"></input><br>
+					<input type="radio" name="CPSC317" value="1 F 1200 1230"></input><br>
+					<input type="radio" name="CPSC317" value="2 M W F 1500 1530 XX XX"><br>WAGNER, ALAN</input><br>
+					<input type="radio" name="CPSC317" value="2 H 1530 1600"></input><br>
+					<input type="radio" name="CPSC317" value="2 F 900 930"></input><br>
+					<input type="radio" name="CPSC317" value="2 F 1200 1230"></input><br>
+					<input type="radio" name="CPSC317" value="2 H 1430 1500"></input><br>
+				</div>
+				<div class="course">
+					CPSC 319<br>
+					<input type="radio" name="CPSC319" value=""></input><br>
+					<input type="radio" name="CPSC319" value="1 T H 1230 1300 1330"><br></input><br>
+					<input type="radio" name="CPSC319" value="2 T H 1230 1300 1330"><br>JIM, JERRY</input><br>
+				</div>
+				<div class="course">
+					CPSC 322<br>
+					<input type="radio" name="CPSC322" value=""></input><br>
+					<input type="radio" name="CPSC322" value="1 T H 1700 1730 1800"><br>CONATI, CRISTINA</input><br>
+					<input type="radio" name="CPSC322" value="2 T H 930 1000 1030"><br>POOLE, DAVID</input><br>
+				</div>
+				<div class="course">
+					CPSC 344<br>
+					<input type="radio" name="CPSC344" value=""></input><br>
+					<input type="radio" name="CPSC344" value="1 M W 1600 1630 1700"></input><br>
+					<input type="radio" name="CPSC344" value="1 H 1000 1030 1100 1130 XXX"></input><br>
+					<input type="radio" name="CPSC344" value="1 H 1400 1430 1500 1530 XXX"></input><br>
+					<input type="radio" name="CPSC344" value="1 F 1000 1030 1100 1130 XXX"></input><br>
+					<input type="radio" name="CPSC344" value="1 F 1300 1330 1400 1430 XXX"></input><br>
+				</div>
+				<div style="clear:float;"></div>
+			</div>
+		</div>
+		<div style="width: 100%;">
+			<table id="term1"cellspacing="0" cellpadding="0">
+				<tr>
+					<th>Time</th>
+					<th>Monday</th>
+					<th>Tuesday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+				</tr>
+				<tr>
+					<td>8:00 AM</td>
+					<td id="1-M-800"></td>
+					<td id="1-T-800"></td>
+					<td id="1-W-800"></td>
+					<td id="1-H-800"></td>
+					<td id="1-F-800"></td>
+				</tr>
+				<tr>
+					<td>8:30 AM</td>
+					<td id="1-M-830"></td>
+					<td id="1-T-830"></td>
+					<td id="1-W-830"></td>
+					<td id="1-H-830"></td>
+					<td id="1-F-830"></td>
+				</tr>
+				<tr>
+					<td>9:00 AM</td>
+					<td id="1-M-900"></td>
+					<td id="1-T-900"></td>
+					<td id="1-W-900"></td>
+					<td id="1-H-900"></td>
+					<td id="1-F-900"></td>
+				</tr>
+				<tr>
+					<td>9:30 AM</td>
+					<td id="1-M-930"></td>
+					<td id="1-T-930"></td>
+					<td id="1-W-930"></td>
+					<td id="1-H-930"></td>
+					<td id="1-F-930"></td>
+				</tr>
+				<tr>
+					<td>10:00 AM</td>
+					<td id="1-M-1000"></td>
+					<td id="1-T-1000"></td>
+					<td id="1-W-1000"></td>
+					<td id="1-H-1000"></td>
+					<td id="1-F-1000"></td>
+				</tr>
+				<tr>
+					<td>10:30 AM</td>
+					<td id="1-M-1030"></td>
+					<td id="1-T-1030"></td>
+					<td id="1-W-1030"></td>
+					<td id="1-H-1030"></td>
+					<td id="1-F-1030"></td>
+				</tr>
+				<tr>
+					<td>11:00 AM</td>
+					<td id="1-M-1100"></td>
+					<td id="1-T-1100"></td>
+					<td id="1-W-1100"></td>
+					<td id="1-H-1100"></td>
+					<td id="1-F-1100"></td>
+				</tr>
+				<tr>
+					<td>11:30 AM</td>
+					<td id="1-M-1130"></td>
+					<td id="1-T-1130"></td>
+					<td id="1-W-1130"></td>
+					<td id="1-H-1130"></td>
+					<td id="1-F-1130"></td>
+				</tr>
+				<tr>
+					<td>12:00 PM</td>
+					<td id="1-M-1200"></td>
+					<td id="1-T-1200"></td>
+					<td id="1-W-1200"></td>
+					<td id="1-H-1200"></td>
+					<td id="1-F-1200"></td>
+				</tr>
+				<tr>
+					<td>12:30 PM</td>
+					<td id="1-M-1230"></td>
+					<td id="1-T-1230"></td>
+					<td id="1-W-1230"></td>
+					<td id="1-H-1230"></td>
+					<td id="1-F-1230"></td>
+				</tr>
+				<tr>
+					<td>13:00 PM</td>
+					<td id="1-M-1300"></td>
+					<td id="1-T-1300"></td>
+					<td id="1-W-1300"></td>
+					<td id="1-H-1300"></td>
+					<td id="1-F-1300"></td>
+				</tr>
+				<tr>
+					<td>13:30 PM</td>
+					<td id="1-M-1330"></td>
+					<td id="1-T-1330"></td>
+					<td id="1-W-1330"></td>
+					<td id="1-H-1330"></td>
+					<td id="1-F-1330"></td>
+				</tr>
+				<tr>
+					<td>14:00 PM</td>
+					<td id="1-M-1400"></td>
+					<td id="1-T-1400"></td>
+					<td id="1-W-1400"></td>
+					<td id="1-H-1400"></td>
+					<td id="1-F-1400"></td>
+				</tr>
+				<tr>
+					<td>14:30 PM</td>
+					<td id="1-M-1430"></td>
+					<td id="1-T-1430"></td>
+					<td id="1-W-1430"></td>
+					<td id="1-H-1430"></td>
+					<td id="1-F-1430"></td>
+				</tr>
+				<tr>
+					<td>15:00 PM</td>
+					<td id="1-M-1500"></td>
+					<td id="1-T-1500"></td>
+					<td id="1-W-1500"></td>
+					<td id="1-H-1500"></td>
+					<td id="1-F-1500"></td>
+				</tr>
+				<tr>
+					<td>15:30 PM</td>
+					<td id="1-M-1530"></td>
+					<td id="1-T-1530"></td>
+					<td id="1-W-1530"></td>
+					<td id="1-H-1530"></td>
+					<td id="1-F-1530"></td>
+				</tr>
+				<tr>
+					<td>16:00 PM</td>
+					<td id="1-M-1600"></td>
+					<td id="1-T-1600"></td>
+					<td id="1-W-1600"></td>
+					<td id="1-H-1600"></td>
+					<td id="1-F-1600"></td>
+				</tr>
+				<tr>
+					<td>16:30 PM</td>
+					<td id="1-M-1630"></td>
+					<td id="1-T-1630"></td>
+					<td id="1-W-1630"></td>
+					<td id="1-H-1630"></td>
+					<td id="1-F-1630"></td>
+				</tr>
+				<tr>
+					<td>17:00 PM</td>
+					<td id="1-M-1700"></td>
+					<td id="1-T-1700"></td>
+					<td id="1-W-1700"></td>
+					<td id="1-H-1700"></td>
+					<td id="1-F-1700"></td>
+				</tr>
+				<tr>
+					<td>17:30 PM</td>
+					<td id="1-M-1730"></td>
+					<td id="1-T-1730"></td>
+					<td id="1-W-1730"></td>
+					<td id="1-H-1730"></td>
+					<td id="1-F-1730"></td>
+				</tr>
+				<tr>
+					<td>18:00 PM</td>
+					<td id="1-M-1800"></td>
+					<td id="1-T-1800"></td>
+					<td id="1-W-1800"></td>
+					<td id="1-H-1800"></td>
+					<td id="1-F-1800"></td>
+				</tr>
+				<tr>
+					<td>18:30 PM</td>
+					<td id="1-M-1830"></td>
+					<td id="1-T-1830"></td>
+					<td id="1-W-1830"></td>
+					<td id="1-H-1830"></td>
+					<td id="1-F-1830"></td>
+				</tr>
+			</table>
+
+			<table id="term2"cellspacing="0" cellpadding="0">
+				<tr>
+					<th>Time</th>
+					<th>Monday</th>
+					<th>Tuesday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+				</tr>
+				<tr>
+					<td>8:00 AM</td>
+					<td id="2-M-800"></td>
+					<td id="2-T-800"></td>
+					<td id="2-W-800"></td>
+					<td id="2-H-800"></td>
+					<td id="2-F-800"></td>
+				</tr>
+				<tr>
+					<td>8:30 AM</td>
+					<td id="2-M-830"></td>
+					<td id="2-T-830"></td>
+					<td id="2-W-830"></td>
+					<td id="2-H-830"></td>
+					<td id="2-F-830"></td>
+				</tr>
+				<tr>
+					<td>9:00 AM</td>
+					<td id="2-M-900"></td>
+					<td id="2-T-900"></td>
+					<td id="2-W-900"></td>
+					<td id="2-H-900"></td>
+					<td id="2-F-900"></td>
+				</tr>
+				<tr>
+					<td>9:30 AM</td>
+					<td id="2-M-930"></td>
+					<td id="2-T-930"></td>
+					<td id="2-W-930"></td>
+					<td id="2-H-930"></td>
+					<td id="2-F-930"></td>
+				</tr>
+				<tr>
+					<td>10:00 AM</td>
+					<td id="2-M-1000"></td>
+					<td id="2-T-1000"></td>
+					<td id="2-W-1000"></td>
+					<td id="2-H-1000"></td>
+					<td id="2-F-1000"></td>
+				</tr>
+				<tr>
+					<td>10:30 AM</td>
+					<td id="2-M-1030"></td>
+					<td id="2-T-1030"></td>
+					<td id="2-W-1030"></td>
+					<td id="2-H-1030"></td>
+					<td id="2-F-1030"></td>
+				</tr>
+				<tr>
+					<td>11:00 AM</td>
+					<td id="2-M-1100"></td>
+					<td id="2-T-1100"></td>
+					<td id="2-W-1100"></td>
+					<td id="2-H-1100"></td>
+					<td id="2-F-1100"></td>
+				</tr>
+				<tr>
+					<td>11:30 AM</td>
+					<td id="2-M-1130"></td>
+					<td id="2-T-1130"></td>
+					<td id="2-W-1130"></td>
+					<td id="2-H-1130"></td>
+					<td id="2-F-1130"></td>
+				</tr>
+				<tr>
+					<td>12:00 PM</td>
+					<td id="2-M-1200"></td>
+					<td id="2-T-1200"></td>
+					<td id="2-W-1200"></td>
+					<td id="2-H-1200"></td>
+					<td id="2-F-1200"></td>
+				</tr>
+				<tr>
+					<td>12:30 PM</td>
+					<td id="2-M-1230"></td>
+					<td id="2-T-1230"></td>
+					<td id="2-W-1230"></td>
+					<td id="2-H-1230"></td>
+					<td id="2-F-1230"></td>
+				</tr>
+				<tr>
+					<td>13:00 PM</td>
+					<td id="2-M-1300"></td>
+					<td id="2-T-1300"></td>
+					<td id="2-W-1300"></td>
+					<td id="2-H-1300"></td>
+					<td id="2-F-1300"></td>
+				</tr>
+				<tr>
+					<td>13:30 PM</td>
+					<td id="2-M-1330"></td>
+					<td id="2-T-1330"></td>
+					<td id="2-W-1330"></td>
+					<td id="2-H-1330"></td>
+					<td id="2-F-1330"></td>
+				</tr>
+				<tr>
+					<td>14:00 PM</td>
+					<td id="2-M-1400"></td>
+					<td id="2-T-1400"></td>
+					<td id="2-W-1400"></td>
+					<td id="2-H-1400"></td>
+					<td id="2-F-1400"></td>
+				</tr>
+				<tr>
+					<td>14:30 PM</td>
+					<td id="2-M-1430"></td>
+					<td id="2-T-1430"></td>
+					<td id="2-W-1430"></td>
+					<td id="2-H-1430"></td>
+					<td id="2-F-1430"></td>
+				</tr>
+				<tr>
+					<td>15:00 PM</td>
+					<td id="2-M-1500"></td>
+					<td id="2-T-1500"></td>
+					<td id="2-W-1500"></td>
+					<td id="2-H-1500"></td>
+					<td id="2-F-1500"></td>
+				</tr>
+				<tr>
+					<td>15:30 PM</td>
+					<td id="2-M-1530"></td>
+					<td id="2-T-1530"></td>
+					<td id="2-W-1530"></td>
+					<td id="2-H-1530"></td>
+					<td id="2-F-1530"></td>
+				</tr>
+				<tr>
+					<td>16:00 PM</td>
+					<td id="2-M-1600"></td>
+					<td id="2-T-1600"></td>
+					<td id="2-W-1600"></td>
+					<td id="2-H-1600"></td>
+					<td id="2-F-1600"></td>
+				</tr>
+				<tr>
+					<td>16:30 PM</td>
+					<td id="2-M-1630"></td>
+					<td id="2-T-1630"></td>
+					<td id="2-W-1630"></td>
+					<td id="2-H-1630"></td>
+					<td id="2-F-1630"></td>
+				</tr>
+				<tr>
+					<td>17:00 PM</td>
+					<td id="2-M-1700"></td>
+					<td id="2-T-1700"></td>
+					<td id="2-W-1700"></td>
+					<td id="2-H-1700"></td>
+					<td id="2-F-1700"></td>
+				</tr>
+				<tr>
+					<td>17:30 PM</td>
+					<td id="2-M-1730"></td>
+					<td id="2-T-1730"></td>
+					<td id="2-W-1730"></td>
+					<td id="2-H-1730"></td>
+					<td id="2-F-1730"></td>
+				</tr>
+				<tr>
+					<td>18:00 PM</td>
+					<td id="2-M-1800"></td>
+					<td id="2-T-1800"></td>
+					<td id="2-W-1800"></td>
+					<td id="2-H-1800"></td>
+					<td id="2-F-1800"></td>
+				</tr>
+				<tr>
+					<td>18:30 PM</td>
+					<td id="2-M-1830"></td>
+					<td id="2-T-1830"></td>
+					<td id="2-W-1830"></td>
+					<td id="2-H-1830"></td>
+					<td id="2-F-1830"></td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
+
+<script>
+	calendarTimes =
+	{
+		"1-M-800": 0,
+		"1-M-830": 0,
+		"1-M-900": 0,
+		"1-M-930": 0,
+		"1-M-1000": 0,
+		"1-M-1030": 0,
+		"1-M-1100": 0,
+		"1-M-1130": 0,
+		"1-M-1200": 0,
+		"1-M-1230": 0,
+		"1-M-1300": 0,
+		"1-M-1330": 0,
+		"1-M-1400": 0,
+		"1-M-1430": 0,
+		"1-M-1500": 0,
+		"1-M-1530": 0,
+		"1-M-1600": 0,
+		"1-M-1630": 0,
+		"1-M-1700": 0,
+		"1-M-1730": 0,
+		"1-M-1800": 0,
+		"1-M-1830": 0,
+		"2-M-800": 0,
+		"2-M-830": 0,
+		"2-M-900": 0,
+		"2-M-930": 0,
+		"2-M-1000": 0,
+		"2-M-1030": 0,
+		"2-M-1100": 0,
+		"2-M-1130": 0,
+		"2-M-1200": 0,
+		"2-M-1230": 0,
+		"2-M-1300": 0,
+		"2-M-1330": 0,
+		"2-M-1400": 0,
+		"2-M-1430": 0,
+		"2-M-1500": 0,
+		"2-M-1530": 0,
+		"2-M-1600": 0,
+		"2-M-1630": 0,
+		"2-M-1700": 0,
+		"2-M-1730": 0,
+		"2-M-1800": 0,
+		"2-M-1830": 0,
+		"1-T-800": 0,
+		"1-T-830": 0,
+		"1-T-900": 0,
+		"1-T-930": 0,
+		"1-T-1000": 0,
+		"1-T-1030": 0,
+		"1-T-1100": 0,
+		"1-T-1130": 0,
+		"1-T-1200": 0,
+		"1-T-1230": 0,
+		"1-T-1300": 0,
+		"1-T-1330": 0,
+		"1-T-1400": 0,
+		"1-T-1430": 0,
+		"1-T-1500": 0,
+		"1-T-1530": 0,
+		"1-T-1600": 0,
+		"1-T-1630": 0,
+		"1-T-1700": 0,
+		"1-T-1730": 0,
+		"1-T-1800": 0,
+		"1-T-1830": 0,
+		"2-T-800": 0,
+		"2-T-830": 0,
+		"2-T-900": 0,
+		"2-T-930": 0,
+		"2-T-1000": 0,
+		"2-T-1030": 0,
+		"2-T-1100": 0,
+		"2-T-1130": 0,
+		"2-T-1200": 0,
+		"2-T-1230": 0,
+		"2-T-1300": 0,
+		"2-T-1330": 0,
+		"2-T-1400": 0,
+		"2-T-1430": 0,
+		"2-T-1500": 0,
+		"2-T-1530": 0,
+		"2-T-1600": 0,
+		"2-T-1630": 0,
+		"2-T-1700": 0,
+		"2-T-1730": 0,
+		"2-T-1800": 0,
+		"2-T-1830": 0,
+		"1-W-800": 0,
+		"1-W-830": 0,
+		"1-W-900": 0,
+		"1-W-930": 0,
+		"1-W-1000": 0,
+		"1-W-1030": 0,
+		"1-W-1100": 0,
+		"1-W-1130": 0,
+		"1-W-1200": 0,
+		"1-W-1230": 0,
+		"1-W-1300": 0,
+		"1-W-1330": 0,
+		"1-W-1400": 0,
+		"1-W-1430": 0,
+		"1-W-1500": 0,
+		"1-W-1530": 0,
+		"1-W-1600": 0,
+		"1-W-1630": 0,
+		"1-W-1700": 0,
+		"1-W-1730": 0,
+		"1-W-1800": 0,
+		"1-W-1830": 0,
+		"2-W-800": 0,
+		"2-W-830": 0,
+		"2-W-900": 0,
+		"2-W-930": 0,
+		"2-W-1000": 0,
+		"2-W-1030": 0,
+		"2-W-1100": 0,
+		"2-W-1130": 0,
+		"2-W-1200": 0,
+		"2-W-1230": 0,
+		"2-W-1300": 0,
+		"2-W-1330": 0,
+		"2-W-1400": 0,
+		"2-W-1430": 0,
+		"2-W-1500": 0,
+		"2-W-1530": 0,
+		"2-W-1600": 0,
+		"2-W-1630": 0,
+		"2-W-1700": 0,
+		"2-W-1730": 0,
+		"2-W-1800": 0,
+		"2-W-1830": 0,
+		"1-H-800": 0,
+		"1-H-830": 0,
+		"1-H-900": 0,
+		"1-H-930": 0,
+		"1-H-1000": 0,
+		"1-H-1030": 0,
+		"1-H-1100": 0,
+		"1-H-1130": 0,
+		"1-H-1200": 0,
+		"1-H-1230": 0,
+		"1-H-1300": 0,
+		"1-H-1330": 0,
+		"1-H-1400": 0,
+		"1-H-1430": 0,
+		"1-H-1500": 0,
+		"1-H-1530": 0,
+		"1-H-1600": 0,
+		"1-H-1630": 0,
+		"1-H-1700": 0,
+		"1-H-1730": 0,
+		"1-H-1800": 0,
+		"1-H-1830": 0,
+		"2-H-800": 0,
+		"2-H-830": 0,
+		"2-H-900": 0,
+		"2-H-930": 0,
+		"2-H-1000": 0,
+		"2-H-1030": 0,
+		"2-H-1100": 0,
+		"2-H-1130": 0,
+		"2-H-1200": 0,
+		"2-H-1230": 0,
+		"2-H-1300": 0,
+		"2-H-1330": 0,
+		"2-H-1400": 0,
+		"2-H-1430": 0,
+		"2-H-1500": 0,
+		"2-H-1530": 0,
+		"2-H-1600": 0,
+		"2-H-1630": 0,
+		"2-H-1700": 0,
+		"2-H-1730": 0,
+		"2-H-1800": 0,
+		"2-H-1830": 0,
+		"1-F-800": 0,
+		"1-F-830": 0,
+		"1-F-900": 0,
+		"1-F-930": 0,
+		"1-F-1000": 0,
+		"1-F-1030": 0,
+		"1-F-1100": 0,
+		"1-F-1130": 0,
+		"1-F-1200": 0,
+		"1-F-1230": 0,
+		"1-F-1300": 0,
+		"1-F-1330": 0,
+		"1-F-1400": 0,
+		"1-F-1430": 0,
+		"1-F-1500": 0,
+		"1-F-1530": 0,
+		"1-F-1600": 0,
+		"1-F-1630": 0,
+		"1-F-1700": 0,
+		"1-F-1730": 0,
+		"1-F-1800": 0,
+		"1-F-1830": 0,
+		"2-F-800": 0,
+		"2-F-830": 0,
+		"2-F-900": 0,
+		"2-F-930": 0,
+		"2-F-1000": 0,
+		"2-F-1030": 0,
+		"2-F-1100": 0,
+		"2-F-1130": 0,
+		"2-F-1200": 0,
+		"2-F-1230": 0,
+		"2-F-1300": 0,
+		"2-F-1330": 0,
+		"2-F-1400": 0,
+		"2-F-1430": 0,
+		"2-F-1500": 0,
+		"2-F-1530": 0,
+		"2-F-1600": 0,
+		"2-F-1630": 0,
+		"2-F-1700": 0,
+		"2-F-1730": 0,
+		"2-F-1800": 0,
+		"2-F-1830": 0
+	};
+
+	for (x = 0; x < $("input").length; x++) {
+		$("input")[x].outerHTML = $("input")[x].outerHTML + $("input")[x].value;
+	}
+
+	$(":input").on("click", function() {
+		resetCalendar();
+
+		for (i = 0; i < $("input:checked").length; i++) {
+			time = $("input:checked")[i].value;
+			console.log(time);
+			timeParts = time.split(" ");
+			times = [];
+			if (timeParts.length = 5) {
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[3]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[4]);
+				times.push(timeParts[0] + "-" + timeParts[2] + "-" + timeParts[3]);
+				times.push(timeParts[0] + "-" + timeParts[2] + "-" + timeParts[4]);
+			}
+			else if (timeParts.length = 4) {
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[2]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[3]);
+			}
+			else if (timeParts.length = 6) {
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[3]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[4]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[5]);
+				times.push(timeParts[0] + "-" + timeParts[2] + "-" + timeParts[3]);
+				times.push(timeParts[0] + "-" + timeParts[2] + "-" + timeParts[4]);
+				times.push(timeParts[0] + "-" + timeParts[2] + "-" + timeParts[5]);
+			}
+			else if (timeParts.length = 7) {
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[2]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[3]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[4]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[5]);
+			}
+			else if (timeParts.length = 8) {
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[4]);
+				times.push(timeParts[0] + "-" + timeParts[1] + "-" + timeParts[5]);
+				times.push(timeParts[0] + "-" + timeParts[2] + "-" + timeParts[4]);
+				times.push(timeParts[0] + "-" + timeParts[2] + "-" + timeParts[5]);
+				times.push(timeParts[0] + "-" + timeParts[3] + "-" + timeParts[4]);
+				times.push(timeParts[0] + "-" + timeParts[3] + "-" + timeParts[5]);
+			}
+			else {
+				alert("error");
+			}
+			console.log(times);
+			for (ii = 0; ii < times.length; ii++) {
+				calendarTimes[times[ii]] = calendarTimes[times[ii]] + 1;
+			}
+		}	
+		
+		updateCalendar();
+	});
+
+	function resetCalendar() {
+		for (property in calendarTimes) {
+			calendarTimes[property] = 0;
+		}
+	}
+
+	function updateCalendar() {
+		for (property in calendarTimes) {
+			value = calendarTimes[property];
+			if (value == 1) {
+				$("#" + property).css("backgroundColor", "green");
+			}
+			else if (value > 1) {
+				$("#" + property).css("backgroundColor", "red");
+			}
+			else {
+				$("#" + property).css("backgroundColor", "white");
+			}
+		}
+	}
+</script>
